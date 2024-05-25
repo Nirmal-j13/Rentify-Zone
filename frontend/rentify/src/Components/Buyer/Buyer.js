@@ -28,7 +28,7 @@ export const Buyer = () => {
                 console.log(data)
             })
             alert("Signin Successfull")
-            navigate('/sellerpost')
+            navigate('/buyerinterest')
       }
       catch(err)
       {

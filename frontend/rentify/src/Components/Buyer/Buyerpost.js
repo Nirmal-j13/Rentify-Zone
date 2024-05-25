@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 export const Buyerpost = () => {
     const[search,setSearch]=useState("");
     const[Seller,setSeller]=useState([]);
@@ -112,11 +112,12 @@ export const Buyerpost = () => {
                     {val.collegenearby}
                 </th>
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <Link to={"/sellerinterestpost/"+val._id}
+                <Link 
                    class="relative mr-4 rounded px-5 py-2.5 overflow-hidden group bg-blue-500 relative hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-blue-400 transition-all ease-out duration-300"
 >
 <span class="absolute right-0 w-5 h-32-mt-12 transition-all duration-1000 transform translate-x-12 rotate-12 group-hover:-translate-x-40 ease"></span>
-<span class="relative">I'm Interested</span>
+<span class="relative"
+ onClick={()=>{alert("Interest have been send")}}>I'm Interested</span>
 </Link>
                 </th>
             </tr>

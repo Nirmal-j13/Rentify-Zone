@@ -8,6 +8,7 @@ import { Home } from './Components/Home/Home';
 import { Sellerpost } from './Components/Seller/Sellerpost';
 import { Sellernewpost } from './Components/Seller/Sellernewpost';
 import { SellerUpdate } from './Components/Seller/SellerUpdate';
+import { Buyerpost } from './Components/Buyer/Buyerpost';
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ function App() {
          <Route path='/' element={<Home/>}/>
          <Route path='/seller' element={<Seller/>}/>
          <Route path='/buyer' element={<Buyer/>}/>
+         <Route path='/buyerinterest' element={<Buyerpost/>}/>
          <Route path='/newuser' element={<Newuser/>}/>
          <Route path='/sellerpost' element={<Sellerpost/>}/>
          <Route path='/sellernewpost' element={<Sellernewpost/>}/>
