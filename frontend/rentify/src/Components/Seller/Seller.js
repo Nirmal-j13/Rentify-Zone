@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { url } from '../../url';
 export const Seller = () => {
     let navigate=useNavigate();
     const[email,setemail]=useState("");
@@ -15,7 +16,7 @@ export const Seller = () => {
             {
                 alert('enter password')
             }
-            await fetch(`http://localhost:9000/users/login`, {
+            await fetch(`${url}/users/login`, {
                 method: "POST",
                 body: JSON.stringify({
                      email:email,

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+import { url } from '../../url';
 export const Buyerpost = () => {
     const[search,setSearch]=useState("");
     const[Seller,setSeller]=useState([]);
     useEffect(() => {
         fetch(
-           'http://localhost:9000/seller/sellerdisplay'
+           `${url}/seller/sellerdisplay`
        ).then((res) => {
           console.log(res.json()
           .then((d)=>

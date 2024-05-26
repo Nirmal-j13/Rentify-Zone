@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import { url } from '../../url';
 export const SellerUpdate = () => {
     let navigate=useNavigate();
     const [place,setplace]=useState("");
@@ -13,7 +14,7 @@ export const SellerUpdate = () => {
     const HandleSubmit=async(e)=>{
         try{
             e.preventDefault();
-            await fetch(`http://localhost:9000/seller/sellerupdate/${id}`, {
+            await fetch(`${url}/seller/sellerupdate/${id}`, {
                 method: "PUT",
                 body: JSON.stringify({
                      place:place,
@@ -45,7 +46,7 @@ export const SellerUpdate = () => {
        const retrive=async()=>
        {
        try{
-         let res=await fetch(`http://localhost:9000/seller/sellerupdate/${id}`)
+         let res=await fetch(`${url}/seller/sellerupdate/${id}`)
          res=await res.json();
          console.warn(res);
          setplace(res.data.place);

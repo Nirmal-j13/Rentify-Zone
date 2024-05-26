@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
+import { url } from '../../url';
 export const Sellernewpost = () => {
     let navigate=useNavigate();
     const [place,setplace]=useState("");
@@ -12,7 +13,7 @@ export const Sellernewpost = () => {
     const HandleSubmit=async(e)=>{
         try{
             e.preventDefault();
-            await fetch(`http://localhost:9000/seller/sellerpost`, {
+            await fetch(`${url}/seller/sellerpost`, {
                 method: "POST",
                 body: JSON.stringify({
                      place:place,

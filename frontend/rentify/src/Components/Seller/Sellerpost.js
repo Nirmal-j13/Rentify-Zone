@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import { url } from '../../url';
 export const Sellerpost = () => {
     const[search,setSearch]=useState("");
     const[Seller,setSeller]=useState([]);
     const Deleteform=async(id)=>{
         window.location.reload(true);
-        await fetch(`http://localhost:9000/seller/sellerdelete/${id}`, {
+        await fetch(`${url}/seller/sellerdelete/${id}`, {
             method: 'DELETE',
           })
           .then(res => res.text())
@@ -14,7 +14,7 @@ export const Sellerpost = () => {
     }
     useEffect(() => {
         fetch(
-           'http://localhost:9000/seller/sellerdisplay'
+           `${url}/seller/sellerdisplay`
        ).then((res) => {
           console.log(res.json()
           .then((d)=>

@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import '../Home/Home.css'
 import house from '../Home/house.png'
+import { url } from '../../url'
 export const Home = () => {
   return (
     <div>

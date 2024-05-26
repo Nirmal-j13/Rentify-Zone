@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { url } from '../../url';
 export const Newuser = () => {
     let navigate=useNavigate();
     const [firstname,setfirstname]=useState("");
@@ -35,7 +36,7 @@ export const Newuser = () => {
                     }
             else 
             {
-            await fetch(`http://localhost:9000/users/register`, {
+            await fetch(`${url}/users/register`, {
                 method: "POST",
                 body: JSON.stringify({
                      firstname:firstname,
