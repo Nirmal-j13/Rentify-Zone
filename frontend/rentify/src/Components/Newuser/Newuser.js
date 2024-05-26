@@ -36,7 +36,7 @@ export const Newuser = () => {
                     }
             else 
             {
-            await fetch(`${url}/users/register`, {
+            await fetch(`https://rentify-zone.vercel.app/users/register`, {
                 method: "POST",
                 body: JSON.stringify({
                      firstname:firstname,
