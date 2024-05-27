@@ -77,6 +77,9 @@ export const Buyerpost = () => {
                     College Nearby
                 </th>
                 <th scope="col" class="px-6 py-3">
+                    Like It
+                </th>
+                <th scope="col" class="px-6 py-3">
                     Interested
                 </th>
             </tr>
@@ -111,6 +114,9 @@ export const Buyerpost = () => {
                 </th>
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     {val.collegenearby}
+                </th>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    
                 </th>
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 <Link 
