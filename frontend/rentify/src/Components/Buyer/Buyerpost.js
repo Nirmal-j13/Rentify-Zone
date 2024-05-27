@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { url } from '../../url';
+import heart from '../Buyer/heart.png';
 export const Buyerpost = () => {
     const[search,setSearch]=useState("");
     const[Seller,setSeller]=useState([]);
@@ -116,7 +117,7 @@ export const Buyerpost = () => {
                     {val.collegenearby}
                 </th>
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    
+                   <img src={heart} alt='heart' className='heart'/>
                 </th>
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 <Link 
