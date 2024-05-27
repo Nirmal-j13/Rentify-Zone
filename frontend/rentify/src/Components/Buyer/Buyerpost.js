@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { url } from '../../url';
 import heart from '../Buyer/heart.png';
+import '../Buyer/Buyerpost.css'
 export const Buyerpost = () => {
     const[search,setSearch]=useState("");
     const[Seller,setSeller]=useState([]);
+    const[buyerheart,setbuyerheart]=useState(false);
     useEffect(() => {
         fetch(
            `${url}/seller/sellerdisplay`
@@ -16,6 +18,16 @@ export const Buyerpost = () => {
            setSeller(d.data);
           }
        ))})},[]);
+    const Handleheart=()=>{
+        if(buyerheart==false)
+        {
+            setbuyerheart(true);
+        }
+        else 
+        {
+            setbuyerheart(false);
+        }
+    }
   return (
     <div>
          <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
@@ -116,8 +128,12 @@ export const Buyerpost = () => {
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     {val.collegenearby}
                 </th>
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                   <img src={heart} alt='heart' className='heart'/>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white" onClick={Handleheart}>
+                    {
+                        buyerheart?
+                        <> <img src={heart} alt='heart' className='heart' /></>:
+                        <> <img src={heart} alt='heart' /></>
+                    }
                 </th>
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 <Link 

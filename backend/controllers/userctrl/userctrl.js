@@ -50,7 +50,14 @@ const loginctrl=async (req,res,next)=>{
                 phoneno:userfound.phoneno,
             });
         }
-      }
+        }
+        else 
+        {
+            res.json({
+                status:"Success",
+                data:"Invalid User"
+            });
+        }
     }
     catch(err){
         console.log(err)

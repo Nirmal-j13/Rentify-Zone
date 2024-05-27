@@ -25,15 +25,20 @@ export const Seller = () => {
                 headers: {
                     "Content-type": "application/json; charset=UTF-8"
                 }
-            }).then((data)=>{
-                console.log(data)
+            }).then((r)=>{
+                if(r.data==="Invalid user")
+                    {
+                        alert(r.data);
+                        navigate('/')
+                    }
+                console.log(r.data)
             })
             alert("Signin Successfull")
             navigate('/sellerpost')
       }
       catch(err)
       {
-
+        alert("Invalid Email or Password")
       }
     }
     return (
