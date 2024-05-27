@@ -77,7 +77,7 @@ export const Buyerpost = () => {
                     College Nearby
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Update / Delete
+                    Interested
                 </th>
             </tr>
         </thead>
